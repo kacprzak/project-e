@@ -1,4 +1,5 @@
-isDivisableBy :: [Int] -> Int -> Bool
-isDivisableBy xs y = all (\z -> y `rem` z == 0) xs
+leastCommonMultiple :: [Int] -> Int
+leastCommonMultiple (x1:x2:[]) = lcm x1 x2
+leastCommonMultiple (x:xs) = lcm x (leastCommonMultiple xs)
 
-main = print $ head $ filter (isDivisableBy [11..20]) [20,40..]
+main = print $ leastCommonMultiple [11..20]
