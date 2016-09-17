@@ -1,4 +1,4 @@
-pithagoreanTriplets = [(a,b,c) | c <- [1..], b <- [1..c-1], a <- [1..b-1], a*a+b*b==c*c]
+pithagoreanTriplets = [(a,b,c) | c <- [3..], b <- [1..c-1], a <- [1..b-1], a*a+b*b==c*c]
 
 main = print $ prod $ head $ filter eq1000 pithagoreanTriplets
   where
