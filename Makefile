@@ -1,5 +1,5 @@
 SOURCES=*.hs
-TARGETS=problem_1 problem_2 problem_3 problem_4 problem_5 problem_6 problem_7 problem_8 problem_9 problem_10 problem_11 problem_12 problem_13 problem_14 problem_15 problem_16 problem_18 problem_20 problem_67
+TARGETS=p001 p002 p003 p004 p005 p006 p007 p008 p009 p010 p011 p012 p013 p014 p015 p016 p018 p020 p067
 
 all: $(TARGETS)
 
