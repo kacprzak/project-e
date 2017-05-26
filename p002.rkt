@@ -12,4 +12,4 @@
       (cons val (takeWhile (stream-rest s) predicate))
       empty))
 
-(apply + (filter even? (takeWhile fib-stream (λ (x) (< x 4000000)))))
+(apply + (filter even? (takeWhile fib-stream (curry >= 4000000))))
