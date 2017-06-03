@@ -45,4 +45,4 @@
 (define (letters-count str)
   (string-length (string-replace (string-replace str "-" "") " " "")))
 
-(apply + (map letters-count (map toEnglish (range 1 1001))))
+(apply + (map (compose1 letters-count toEnglish) (range 1 1001)))
