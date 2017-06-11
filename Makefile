@@ -4,7 +4,7 @@ TARGETS=p001 p002 p003 p004 p005 p006 p007 p008 p009 p010 p011 p012 p013 p014 p0
 all: $(TARGETS)
 
 %: %.cpp
-	clang++ -std=c++11 -o $@ $<
+	clang++ -std=c++11 -O3 -o $@ $<
 
 %: %.hs
 	ghc --make $@

@@ -2,18 +2,19 @@
 #include <iostream>
 #include <vector>
 
-template <typename T> bool next_permutation(std::vector<T> &array) {
+template <typename T>
+bool next_permutation(std::vector<T> &array) {
   // Find non-increasing suffix
   if (array.size() == 0)
     return false;
-  typename std::vector<T>::iterator i = array.end() - 1;
+  auto i = array.end() - 1;
   while (i > array.begin() && *(i - 1) >= *i)
     --i;
   if (i == array.begin())
     return false;
 
   // Find successor to pivot
-  typename std::vector<T>::iterator j = array.end() - 1;
+  auto j = array.end() - 1;
   while (*j <= *(i - 1))
     --j;
   std::iter_swap(i - 1, j);
